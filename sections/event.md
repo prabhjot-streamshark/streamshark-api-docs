@@ -6,7 +6,7 @@ Get all events
 
 * `GET /users/{username}/event/basic` will return all events
 
-* `GET /users/{username}/event/basic/page/{pagenumber}' if pagination is required
+* `GET /users/{username}/event/basic/page/{pagenumber}` if pagination is required
 
 ```json
 {
@@ -21,7 +21,7 @@ Get all events
 		"lastUpdatedTime": null,
 		"status": "READY",
 		"eventUrl": "https://live.hacktv.xyz/r/e/vorjbrr/new-dedicated",
-		"sources": null
+		"sources": null,
 		"activeSource": "main",
 		"gaId": null,
 		"embedRestrictions": null,
@@ -98,7 +98,7 @@ Get a specific event
 Update the key and keyserver for a specific event
 -------------
 
-* 'POST /users/{username}/event/{name}'
+* `POST /users/{username}/event/{name}` will update a specific event
 
 ```json
 {
