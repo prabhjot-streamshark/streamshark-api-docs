@@ -1,7 +1,7 @@
 Event API
 ====================
 
-Get all events 
+Get all events
 -------------
 
 * `GET /users/{username}/event/basic` will return all events
@@ -68,6 +68,13 @@ Get all events
 	"moreResult": false
 }
 ```
+Filtering Events
+-------------
+
+The GET request accepts couple of query parameters as well to filter the response based on our requirements
+
+1. *last* = If interested in events created in last X days. Value must be an integer, for example `GET /users/{username}/event/basic?last=10` will return all the events created by the given user in last 10 days. **Note** - If the value is 0, then the response only contains the events created today.
+2. *from* and *to* = If interested in events created within the specific date range. The dates should be in yyyyMMdd format. For example, `GET /users/{username}/event/basic?from=20160110&last=20160215` will return all the events created by the given user from 10th January 2016 to 15th February 2016 (inclusive). **Note** - If any *from* or *to* query parameters are included in the request then these take precedence over the *last* query parameter.
 
 Get a specific event
 -------------
